@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeneSquare - Punnett Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>GeneSquare 🌟 Punnett Square Calculator</h1>
+    </header>
+
+    <main>
+        <section id="setup-area">
+            <h2>Global & Parental Setup</h2>
+            <div class="global-options">
+                <label for="showSexDetails">Show Sex-Specific Details in Output:</label>
+                <input type="checkbox" id="showSexDetails" checked>
+                <small>If unchecked, only aggregate totals will be shown where applicable.</small>
+            </div>
+            <hr>
+            <div id="traits-container">
+                <!-- Trait blocks will be dynamically added here -->
+            </div>
+            <button id="addTraitButton">Add Trait (Max 3)</button>
+            <hr>
+            <div class="parent-setup-container" id="parent1SetupBlock">
+                <h3>Parent 1 <span id="parent1SexDisplay">(Female: XX <span class="female-symbol">♀</span>)</span></h3>
+                <div id="parent1GenotypeInputs">
+                    <!-- Genotype inputs for each trait will be added here -->
+                </div>
+                 <small id="parent1GenoHelp">Select alleles or use preset buttons. Y-linked: N/A for XX.</small><br>
+            </div>
+            <div class="parent-setup-container" id="parent2SetupBlock">
+                <h3>Parent 2 <span id="parent2SexDisplay">(Male: XY <span class="male-symbol">♂</span>)</span></h3>
+                <div id="parent2GenotypeInputs">
+                    <!-- Genotype inputs for each trait will be added here -->
+                </div>
+                <small id="parent2GenoHelp">Select alleles or use preset buttons. Y-linked: Select Y-allele.</small><br>
+            </div>
+            <button id="calculateButton">Calculate Square!</button>
+        </section>
+
+        <section id="results-area">
+            <h2>Results</h2>
+            <div id="errorMessages"></div>
+            <div id="parentalGametes">
+                <h3>Parental Gametes</h3>
+                <p><strong id="p1GameteLabel">Parent 1 (<span class="female-symbol">♀</span> XX) Gametes:</strong> <span id="p1Gametes"></span></p>
+                <p><strong id="p2GameteLabel">Parent 2 (<span class="male-symbol">♂</span> XY) Gametes:</strong> <span id="p2Gametes"></span></p>
+            </div>
+            <div id="punnettSquareContainer">
+                <h3>Punnett Square / Offspring Probabilities</h3>
+                <div id="punnettSquareOrTable"></div> 
+            </div>
+
+            <div id="genotypicRatios">
+                <h3>
+                    Offspring Genotypic Ratios
+                    <div class="sort-controls">
+                        <label for="genoSort">Sort by:</label>
+                        <select id="genoSort">
+                            <option value="alpha">Alphabetical</option>
+                            <option value="percent_desc">Percentage (High-Low)</option>
+                            <option value="percent_asc">Percentage (Low-High)</option>
+                        </select>
+                    </div>
+                </h3>
+                <ul id="genoList"></ul>
+            </div>
+
+            <div id="phenotypicRatios">
+                <h3>
+                    Offspring Phenotypic Ratios
+                    <div class="sort-controls">
+                        <label for="phenoSort">Sort by:</label>
+                        <select id="phenoSort">
+                            <option value="alpha">Alphabetical</option>
+                            <option value="percent_desc">Percentage (High-Low)</option>
+                            <option value="percent_asc">Percentage (Low-High)</option>
+                        </select>
+                    </div>
+                </h3>
+                <ul id="phenoList"></ul>
+            </div>
+
+            <div id="sexRatio" class="sex-dependent-output">
+                <h3>Offspring Sex Ratio</h3>
+                <p id="sexRatioText"></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>GeneSquare - Built with 🧠 & ❤️</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

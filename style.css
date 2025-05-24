@@ -1,0 +1,163 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+h2 { color: #35424a; } /* General h2 */
+
+#results-area h3 { /* More specific for results section h3 */
+    color: #35424a;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    margin-bottom: 0.5em; /* Add some space below h3 */
+}
+
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    width: 200px; 
+}
+
+input[type="text"], select {
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.trait-block input[type="text"], .trait-block select {
+    width: calc(100% - 220px);
+}
+
+small {
+    display: block;
+    margin-top: -8px;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+    color: #666;
+}
+.parent-setup-container small {
+    margin-left: 0; 
+}
+
+button {
+    display: inline-block; 
+    background: #5cb85c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    margin-right: 10px; 
+}
+#calculateButton {
+    display: block; 
+    width: auto;
+    margin-top: 20px; /* More space above calculate button */
+}
+
+button:hover {
+    background: #4cae4c;
+}
+
+#results-area { background-color: #e9f5e9; }
+#errorMessages { color: red; font-weight: bold; margin-bottom:10px; }
+ul { list-style-type: none; padding-left: 0; }
+ul li { padding: 5px 0; }
+ul li strong { display: block; margin-top: 8px; margin-bottom: 3px;}
+
+
+footer { text-align: center; padding: 20px; background: #35424a; color: #fff; margin-top: 30px; }
+
+.trait-block { border: 1px solid #ccc; padding: 15px; margin-bottom: 15px; border-radius: 5px; background-color: #f9f9f9; }
+.trait-block h4 { margin-top: 0; border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 10px; }
+.remove-trait-button { background-color: #d9534f; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; float: right; font-size: 0.8em; }
+.remove-trait-button:hover { background-color: #c9302c; }
+.color-input-label { display: inline-block; width: auto; margin-right: 5px; }
+input[type="color"] { padding: 0; width: 40px; height: 25px; border: 1px solid #ccc; vertical-align: middle; margin-left: 5px; }
+.phenotype-display { display: inline-block; padding: 2px 6px; border-radius: 3px; color: white; margin-left: 5px; font-weight: bold; text-shadow: 1px 1px 1px rgba(0,0,0,0.3); }
+.female-symbol, .female-text { color: #e91e63; }
+.male-symbol, .male-text { color: #2196f3; }
+
+#punnettTable { border-collapse: collapse; margin-top: 10px; width: auto; }
+#punnettTable th, #punnettTable td { border: 1px solid #333; padding: 8px 12px; text-align: center; min-width: 60px; }
+#punnettTable th { background-color: #e0e0e0; }
+#punnettTable .gamete-header { font-style: italic; background-color: #f0f0f0; }
+
+.probability-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9em; }
+.probability-table th, .probability-table td { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }
+.probability-table th { background-color: #f2f2f2; }
+
+#parent1GenotypeInputs div, #parent2GenotypeInputs div { margin-bottom: 8px; }
+hr { margin-top: 20px; margin-bottom: 20px; }
+
+.global-options { padding: 10px; background-color: #f0f8ff; border: 1px solid #add8e6; margin-bottom: 15px; border-radius: 5px; }
+.global-options label { width: auto; margin-right: 10px; }
+.global-options small { margin-left: 10px; display: inline; }
+.sex-dependent-output.hidden-by-toggle { display: none !important; }
+
+.parent-trait-genotype-selector { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px dotted #ddd; }
+.parent-trait-genotype-selector:last-child { border-bottom: none; }
+.parent-trait-genotype-selector .trait-label { font-weight: bold; display: block; margin-bottom: 8px; font-size: 1.05em; color: #35424a; }
+.parent-trait-genotype-selector .allele-dropdown-container { display: inline-block; margin-right: 15px; margin-bottom: 8px; vertical-align: top; }
+.parent-trait-genotype-selector .allele-dropdown-container label { font-weight: normal; width: auto; margin-right: 5px; font-size: 0.9em; display: block; margin-bottom: 3px; }
+.parent-trait-genotype-selector select { padding: 6px 8px; font-size: 0.95em; min-width: 150px; border: 1px solid #ccc; border-radius: 4px; }
+.parent-trait-genotype-selector .genotype-buttons { margin-top: 8px; }
+.parent-trait-genotype-selector .genotype-buttons button { font-size: 0.85em; padding: 5px 10px; margin-right: 8px; background-color: #e9ecef; color: #495057; border: 1px solid #ced4da; border-radius: 4px; cursor: pointer; }
+.parent-trait-genotype-selector .genotype-buttons button:hover { background-color: #dee2e6; border-color: #adb5bd; }
+.parent-trait-genotype-selector .y-chromosome-text, .parent-trait-genotype-selector .x-chromosome-text { display: inline-block; margin: 0 10px; font-size: 1.1em; font-weight: bold; color: #555; vertical-align: middle; line-height: 35px; }
+.parent-trait-genotype-selector .info-text { font-style: italic; color: #6c757d; display: block; margin-top: 5px; font-size: 0.9em; }
+
+/* NEW Sort Controls Styles */
+.sort-controls {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 0.85em;
+    font-weight: normal; 
+}
+.sort-controls label {
+    width: auto; 
+    margin-right: 5px;
+    font-weight: normal;
+}
+.sort-controls select {
+    padding: 4px 6px;
+    font-size: 0.9em;
+    border-radius: 3px;
+}
